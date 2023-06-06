@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 public class Window {
     
     private JFrame frame;
+    private RootView rootView;
 
     public Window(){
         frame = new JFrame();
@@ -14,10 +15,10 @@ public class Window {
     }
 
     private void buildWindow(){
-        RootPane rootPane = new RootPane();
-        frame.add(rootPane.getRootPane());
+        rootView = new RootView(this);
+        frame.add(rootView.getRootPanel());
 
-        frame.setJMenuBar(rootPane.getMenuBarPane().getMenuBar());
+        frame.setJMenuBar(rootView.getMenuBarView().getMenuBar());
         frame.setPreferredSize(new Dimension(800,600));
         frame.setTitle("Poke-Edit");
         frame.setLocationRelativeTo(null);
@@ -25,10 +26,4 @@ public class Window {
         frame.pack();
         frame.setVisible(true);
     }
-
-    public JFrame getFrame() {
-        return frame;
-    }
-
-    
 }

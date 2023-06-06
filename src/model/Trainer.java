@@ -3,22 +3,17 @@ package src.model;
 public class Trainer {
 
     private String name;
-    private boolean gender;//0 = boy, 1 = girl
+    private int gender;//0 = boy, 1 = girl
     private int trainerId;
 
     private int secretId;
-    public Trainer(String name, boolean gender, int trainerId, int secretId){
-        this.name = name;
-        this.gender = gender;
-        this.trainerId = trainerId;
-        this.secretId = secretId;
-    }
 
-    public boolean isGender() {
+
+    public int getGender() {
         return gender;
     }
 
-    public void setGender(boolean gender) {
+    public void setGender(int gender) {
         this.gender = gender;
     }
 

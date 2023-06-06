@@ -8,11 +8,11 @@ public class App {
     private static Data data;
 
     private App(){
-       new Window(); 
+        data = new Data();
+        window = new Window();
     }
 
     public static void main(String[] args) {
-        data = new Data();
         new App();
     }
 
